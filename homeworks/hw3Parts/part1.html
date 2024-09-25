@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A web page to calculate student grades based on homework, mid-term exam, final exam, and participation scores."
+    />
+    <meta
+      name="keywords"
+      content="student grades, homework average, mid-term exam, final exam, participation, grade calculator"
+    />
+    <meta name="author" content="Jinesh Tandel" />
+    <link rel="stylesheet" href="../../styles/global.css" />
+    <link rel="stylesheet" href="../../styles/hw3/part1.css" />
+    <title>Student Grades</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Student Grades</h1>
+
+      <form id="gradesForm">
+        <label for="homeworkAvg">Homework Average:</label>
+        <input
+          type="number"
+          id="homeworkAvg"
+          name="homeworkAvg"
+          min="0"
+          max="100"
+          required
+        /><br /><br />
+
+        <label for="midExam">Mid-Term Exam Score:</label>
+        <input
+          type="number"
+          id="midExam"
+          name="midExam"
+          min="0"
+          max="100"
+          required
+        /><br /><br />
+
+        <label for="finalExam">Final Exam Score:</label>
+        <input
+          type="number"
+          id="finalExam"
+          name="finalExam"
+          min="0"
+          max="100"
+          required
+        /><br /><br />
+
+        <label for="participation">Participation:</label>
+        <input
+          type="number"
+          id="participation"
+          name="participation"
+          min="0"
+          max="100"
+          required
+        /><br /><br />
+
+        <div class="button-group">
+          <button type="button" onclick="calculateGrade()">Submit</button>
+          <button type="reset">Clear</button>
+        </div>
+      </form>
+
+      <div id="resultArea"></div>
+    </div>
+
+    <a href="../hw3.html">Go back to Homework 3 Main Page</a>
+
+    <script src="../../scripts/hw3/part1.js"></script>
+  </body>
+</html>

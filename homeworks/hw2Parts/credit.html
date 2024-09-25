@@ -2,9 +2,18 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Currency Converter - Convert various currencies to U.S. Dollars."
+    />
+    <meta
+      name="keywords"
+      content="currency, converter, exchange rates, USD, Euro, Canadian Dollar, Hong Kong Dollar, Japanese Yen, Mexican Peso"
+    />
+    <meta name="author" content="Jinesh Tandel" />
     <link rel="stylesheet" href="/styles/credit.css" />
     <link rel="stylesheet" href="/styles/global.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Currency Converter</title>
   </head>
   <body>
@@ -46,16 +55,20 @@
           </tr>
           <!-- Input field inside table -->
           <tr>
-            <td colspan="2"><strong>Enter Amount of U.S. Dollars</strong></td>
+            <td colspan="2"></td>
+              <label for="usd-input"><strong>Enter Amount of U.S. Dollars</strong></label>
+            </td>
             <td class="text-right">
               <input
                 type="number"
                 id="usd-input"
+                name="usd-amount"
                 class="input"
                 placeholder="Enter amount"
                 step="0.01"
                 min="0"
               />
+              <span id="error-message" style="color: red; display: none;">Please enter a valid number.</span>
             </td>
           </tr>
         </tbody>
@@ -63,6 +76,17 @@
     </div>
     <a href="../hw2.html">Go back to Homework 2 Main Page</a>
 
+    <script>
+      // document.getElementById('usd-input').addEventListener('input', function() {
+      //   const input = this.value;
+      //   const errorMessage = document.getElementById('error-message');
+      //   if (isNaN(input) || input.trim() === '' || input === '.') {
+      //     errorMessage.style.display = 'inline';
+      //   } else {
+      //     errorMessage.style.display = 'none';
+      //   }
+      // });
+    </script>
     <script src="../../scripts/hw2/credit.js" defer></script>
   </body>
 </html>

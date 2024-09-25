@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Calculate salesperson earnings based on the quantity of items sold."
+    />
+    <meta
+      name="keywords"
+      content="salesperson, earnings calculator, sales, homework, CIS 114"
+    />
+    <meta name="author" content="Jinesh Tandel" />
+    <link rel="stylesheet" href="../../styles/global.css" />
+    <link rel="stylesheet" href="../../styles/hw3/part2.css" />
+    <title>Salesperson Earnings Calculator - Homework 3 Part 2</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Homework 3 - Part 2</h1>
+
+      <form>
+        <div>Seller's Name: <input type="text" id="sellerName" /></div>
+
+        <div>
+          For each item type the quantity sold by the seller:
+          <br />
+          Item 1: <input type="number" id="item1Qty" />
+          <br />
+          Item 2: <input type="number" id="item2Qty" />
+          <br />
+          Item 3: <input type="number" id="item3Qty" />
+          <br />
+          Item 4: <input type="number" id="item4Qty" />
+        </div>
+
+        <div id="error" style="color: red"></div>
+        <!-- Error messages will be shown here -->
+
+        <button type="button" onclick="calculateEarnings()">Submit</button>
+        <button type="reset">Clear Form</button>
+      </form>
+
+      <table>
+        <tr>
+          <th>Item#</th>
+          <th>Price</th>
+          <th>Qty Sold</th>
+          <th>Total $</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>$20.99</td>
+          <td><input type="text" id="item1Sold" readonly /></td>
+          <td><input type="text" id="item1Total" readonly /></td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>$12.75</td>
+          <td><input type="text" id="item2Sold" readonly /></td>
+          <td><input type="text" id="item2Total" readonly /></td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>$9.95</td>
+          <td><input type="text" id="item3Sold" readonly /></td>
+          <td><input type="text" id="item3Total" readonly /></td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>$35.89</td>
+          <td><input type="text" id="item4Sold" readonly /></td>
+          <td><input type="text" id="item4Total" readonly /></td>
+        </tr>
+        <tr>
+          <td colspan="3">Total Amount Sold</td>
+          <td colspan="2">
+            <input type="text" id="totalAmountSold" readonly />
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3">Total Weekly Earnings</td>
+          <td colspan="2">
+            <input type="text" id="totalWeeklyEarnings" readonly />
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <a href="../hw3.html">Go back to Homework 3 Main Page</a>
+
+    <script src="../../scripts/hw3/part2.js"></script>
+  </body>
+</html>
