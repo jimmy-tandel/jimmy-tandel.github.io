@@ -21,18 +21,24 @@
       <h1>Homework 3 - Part 2</h1>
 
       <form>
-        <div>Seller's Name: <input type="text" id="sellerName" /></div>
+        <div>
+          <label for="sellerName">Seller's Name:</label>
+          <input type="text" id="sellerName" />
+        </div>
 
         <div>
-          For each item type the quantity sold by the seller:
+          <p>For each item type the quantity sold by the seller:</p>
+          <label for="item1Qty">Item 1:</label>
+          <input type="number" id="item1Qty" />
           <br />
-          Item 1: <input type="number" id="item1Qty" />
+          <label for="item2Qty">Item 2:</label>
+          <input type="number" id="item2Qty" />
           <br />
-          Item 2: <input type="number" id="item2Qty" />
+          <label for="item3Qty">Item 3:</label>
+          <input type="number" id="item3Qty" />
           <br />
-          Item 3: <input type="number" id="item3Qty" />
-          <br />
-          Item 4: <input type="number" id="item4Qty" />
+          <label for="item4Qty">Item 4:</label>
+          <input type="number" id="item4Qty" />
         </div>
 
         <div id="error" style="color: red"></div>

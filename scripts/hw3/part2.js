@@ -36,7 +36,26 @@ function calculateEarnings() {
 
   // If there's an error, stop the calculation
   if (hasError) {
+    resetTable();
     return;
+  }
+
+  // Function to reset the table values
+  function resetTable() {
+    document.getElementById("item1Sold").value = "";
+    document.getElementById("item1Total").value = "";
+
+    document.getElementById("item2Sold").value = "";
+    document.getElementById("item2Total").value = "";
+
+    document.getElementById("item3Sold").value = "";
+    document.getElementById("item3Total").value = "";
+
+    document.getElementById("item4Sold").value = "";
+    document.getElementById("item4Total").value = "";
+
+    document.getElementById("totalAmountSold").value = "";
+    document.getElementById("totalWeeklyEarnings").value = "";
   }
 
   // Calculate total sales for each item

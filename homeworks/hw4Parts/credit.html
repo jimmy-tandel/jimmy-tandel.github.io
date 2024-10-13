@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Generate a hollow square of asterisks based on user input. Enter a number between 2 and 10 to see the square."
+    />
+    <meta
+      name="keywords"
+      content="hollow square generator, square generator, number input, interactive tool, geometry"
+    />
+    <meta name="author" content="Jinesh Tandel" />
+    <title>Homework 4 Credit</title>
+    <link rel="stylesheet" href="../../styles/global.css" />
+    <link rel="stylesheet" href="../../styles/hw4/credit.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Hollow Square Generator</h1>
+      <div id="input-form">
+        <label for="squareSize">Enter a number between 2 and 10:</label>
+        <input type="number" id="squareSize" min="2" max="10" />
+        <button onclick="generateSquare()">Generate Square</button>
+        <button onclick="clearForm()">Clear Form</button>
+      </div>
+      <div id="result"></div>
+    </div>
+    <a href="../hw4.html">Go back to Homework 4 Main Page</a>
+    <script src="../../scripts/hw4/credit.js"></script>
+  </body>
+</html>

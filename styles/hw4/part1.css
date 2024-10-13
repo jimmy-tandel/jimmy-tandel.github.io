@@ -1,0 +1,31 @@
+.container {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
+    padding: 2rem;
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #18181b;
+}
+
+#resultArea {
+    margin-top: 1.5rem;
+    font-size: 18px;
+    color: #2563eb;
+    font-weight: bold;
+}
+
+.footer-link {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}

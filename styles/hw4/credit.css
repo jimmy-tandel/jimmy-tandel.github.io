@@ -1,0 +1,34 @@
+/* Styles specific to the credit page */
+#input-form {
+    margin-bottom: 1rem;
+}
+
+#squareSize {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+/* Ensure buttons have some space between them */
+button+button {
+    margin-left: 10px;
+}
+
+#result {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+}
+
+.error {
+    color: #dc2626;
+    font-weight: bold;
+}
+
+pre {
+    font-family: monospace;
+    white-space: pre;
+    line-height: 1.2;
+    letter-spacing: normal;
+}
