@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homework 5 - Part 1</title>
+    <meta
+      name="description"
+      content="This page for Homework 5 Part 1 includes a form for user information collection and validation, demonstrating form handling in JavaScript."
+    />
+    <meta
+      name="keywords"
+      content="homework 5, part 1, form validation, user information, interactive form"
+    />
+    <meta name="author" content="Jinesh Tandel" />
+
+    <link rel="stylesheet" href="../../styles/global.css" />
+    <link rel="stylesheet" href="../../styles/hw5/part1.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Homework 5 - Part 1</h1>
+      <form id="userForm">
+        <div class="form-group">
+          <label for="fullName">Full Name:</label>
+          <input type="text" id="fullName" name="fullName" />
+        </div>
+
+        <div class="form-group">
+          <label>Age Group:</label>
+          <div class="radio-group">
+            <div>
+              <input
+                type="radio"
+                id="age1"
+                name="ageGroup"
+                value="less than 21"
+              />
+              <label for="age1">Less than 21</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                id="age2"
+                name="ageGroup"
+                value="between 21 and 50"
+              />
+              <label for="age2">Between 21 and 50</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                id="age3"
+                name="ageGroup"
+                value="older than 50"
+              />
+              <label for="age3">Older than 50</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Browsers Used:</label>
+          <div class="checkbox-group">
+            <div>
+              <input
+                type="checkbox"
+                id="firefox"
+                name="browsers"
+                value="Firefox"
+              />
+              <label for="firefox">Firefox</label>
+            </div>
+            <div>
+              <input type="checkbox" id="edge" name="browsers" value="Edge" />
+              <label for="edge">Edge</label>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                id="chrome"
+                name="browsers"
+                value="Chrome"
+              />
+              <label for="chrome">Chrome</label>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                id="safari"
+                name="browsers"
+                value="Safari"
+              />
+              <label for="safari">Safari</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="moviePreference">Preferred Movie Genre:</label>
+          <select id="moviePreference" name="moviePreference">
+            <option value="">Select a genre</option>
+            <option value="Action">Action</option>
+            <option value="Comedy">Comedy</option>
+            <option value="Drama">Drama</option>
+            <option value="Documentary">Documentary</option>
+            <option value="Science Fiction">Science Fiction</option>
+          </select>
+        </div>
+
+        <div class="button-group">
+          <button type="button" onclick="validateForm()">Submit</button>
+          <button type="reset">Clear Form</button>
+        </div>
+      </form>
+      <div id="resultArea"></div>
+    </div>
+
+    <footer>
+      <a href="../hw5.html">Go back to Homework 5 Main Page</a>
+    </footer>
+    <script src="../../scripts/hw5/part1.js"></script>
+  </body>
+</html>

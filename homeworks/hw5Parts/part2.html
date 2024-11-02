@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homework 5 - Part 2</title>
+    <meta
+      name="description"
+      content="This page for Homework 5 Part 2 demonstrates website navigation using pulldown menus with different event handlers."
+    />
+    <meta
+      name="keywords"
+      content="homework 5, part 2, website navigation, pulldown menus, event handlers"
+    />
+    <meta name="author" content="Jinesh Tandel" />
+
+    <link rel="stylesheet" href="../../styles/global.css" />
+    <link rel="stylesheet" href="../../styles/hw5/part2.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Homework 5 - Part 2</h1>
+
+      <div class="menu-section">
+        <h2>Auto-Navigate Menu</h2>
+        <p>Select a website to visit (opens in new tab):</p>
+        <select id="autoNavigate" onchange="navigateOnChange(this.value)">
+          <option value="">Choose a website...</option>
+        </select>
+      </div>
+
+      <div class="menu-section">
+        <h2>Button-Navigate Menu</h2>
+        <p>
+          Select a website and click the button to visit (opens in new tab):
+        </p>
+        <select id="buttonNavigate">
+          <option value="">Choose a website...</option>
+        </select>
+        <button onclick="navigateOnClick()">Go to Website</button>
+      </div>
+    </div>
+
+    <footer>
+      <a href="../hw5.html">Go back to Homework 5 Main Page</a>
+    </footer>
+    <script src="../../scripts/hw5/part2.js"></script>
+  </body>
+</html>

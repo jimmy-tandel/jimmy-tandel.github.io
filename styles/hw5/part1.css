@@ -1,0 +1,106 @@
+.container {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
+    padding: 2rem;
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #18181b;
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Form group */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+/* Checkbox and radio styling */
+.radio-group,
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.checkbox-group div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.radio-group div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.radio-group label {
+    display: flex;
+    /* width: 150px; */
+    /* display: inline-flex; */
+    /* align-items: center; */
+    font-weight: normal;
+    color: #333;
+}
+
+
+.checkbox-group label {
+    display: flex;
+    /* display: inline-flex; */
+    /* align-items: center; */
+    font-weight: normal;
+    color: #333;
+}
+
+.radio-group input[type="radio"],
+.checkbox-group input[type="checkbox"] {
+    margin-right: 0rem;
+    accent-color: #2563eb;
+    margin: 0;
+    padding: 0;
+    width: 1rem;
+    /* background-color: red; */
+    /* Adds a custom color to the checkbox and radio */
+}
+
+/* Input styling */
+input[type="text"],
+select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Result area styling */
+#resultArea {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    border-radius: 4px;
+}
+
+#resultArea.error {
+    background-color: #fee2e2;
+    color: #dc2626;
+}
+
+#resultArea.success {
+    background-color: #dcfce7;
+    color: #16a34a;
+}

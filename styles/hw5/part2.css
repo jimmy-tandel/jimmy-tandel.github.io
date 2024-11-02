@@ -1,0 +1,70 @@
+.container {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
+    padding: 2rem;
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #18181b;
+    margin-bottom: 1.5rem;
+}
+
+h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #18181b;
+    margin-bottom: 0.5rem;
+}
+
+.menu-section {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+}
+
+.menu-section p {
+    color: #4b5563;
+    margin-bottom: 1rem;
+}
+
+select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    background-color: white;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+select:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.1);
+}
+
+button {
+    margin-top: 0.5rem;
+    width: auto;
+}
+
+footer {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+footer a {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}

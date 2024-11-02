@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homework 5 - Part 3</title>
+    <meta
+      name="description"
+      content="This page for Homework 5 Part 3 allows users to search for state information from the July 2019 census data."
+    />
+    <meta
+      name="keywords"
+      content="homework 5, part 3, state information, census data, search form"
+    />
+    <meta name="author" content="Jinesh Tandel" />
+
+    <link rel="stylesheet" href="../../styles/global.css" />
+    <link rel="stylesheet" href="../../styles/hw5/part3.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Homework 5 - Part 3</h1>
+      <h2>State Information Search - July 2019 Census Data</h2>
+
+      <form id="searchForm">
+        <div class="form-group">
+          <label for="stateInput">Enter State Name or Abbreviation:</label>
+          <input
+            type="text"
+            id="stateInput"
+            name="stateInput"
+            placeholder="e.g. California or CA"
+          />
+        </div>
+
+        <div class="button-group">
+          <button type="button" onclick="searchState()">Get State Info</button>
+          <button type="reset" onclick="clearResult()">Clear Form</button>
+        </div>
+      </form>
+
+      <div id="resultArea" class="result-area"></div>
+    </div>
+
+    <footer>
+      <a href="../hw5.html">Go back to Homework 5 Main Page</a>
+    </footer>
+    <script src="../../scripts/hw5/part3.js"></script>
+  </body>
+</html>
