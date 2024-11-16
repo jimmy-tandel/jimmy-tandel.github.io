@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A tool to validate phone numbers entered by the user."
+    />
+    <meta
+      name="keywords"
+      content="Phone number validation, JavaScript, input validation, user interface, form clearing"
+    />
+    <meta name="author" content="Jinesh Tandel" />
+    <title>Homework 6 - Part 3</title>
+    <link rel="stylesheet" href="../../styles/global.css" />
+    <link rel="stylesheet" href="../../styles/hw6/part3.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Phone Number Validator</h1>
+
+      <div class="form-group">
+        <label for="phoneNumber">Enter phone number:</label>
+        <input type="text" id="phoneNumber" placeholder="(999) 999-9999" />
+      </div>
+
+      <div class="button-group">
+        <button onclick="validatePhone()">Submit</button>
+        <button onclick="clearForm()">Clear Form</button>
+      </div>
+
+      <div id="resultArea"></div>
+    </div>
+
+    <a href="../hw6.html" class="back-link">Go back to Homework 6 Main Page</a>
+
+    <script src="../../scripts/hw6/part3.js"></script>
+  </body>
+</html>
