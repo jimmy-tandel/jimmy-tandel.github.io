@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style Selector</title>
+    <link rel="stylesheet" href="../../styles/global.css">
+    <link rel="stylesheet" href="../../styles/hw7/part1.css">
+    <meta author="Jinesh Tandel">
+    <meta description="Interactive Playground for fomatting text">
+</head>
+<body>
+    <div class="container">
+        <h1>Interactive Style Playground</h1>
+        
+        <form id="styleForm">
+            <div class="form-group">
+                <h2>Background Color</h2>
+                <label>
+                    <input type="radio" name="bgColor" value="white"> White
+                </label>
+                <label>
+                    <input type="radio" name="bgColor" value="lightblue"> Light Blue
+                </label>
+                <label>
+                    <input type="radio" name="bgColor" value="lightgreen"> Light Green
+                </label>
+            </div>
+
+            <div class="form-group">
+                <h2>Text Style</h2>
+                <label>
+                    <input type="checkbox" name="textStyle" value="underline"> Underline
+                </label>
+                <label>
+                    <input type="checkbox" name="textStyle" value="bold"> Bold
+                </label>
+                <label>
+                    <input type="checkbox" name="textStyle" value="italic"> Italic
+                </label>
+            </div>
+
+            <div class="form-group">
+                <h2>Font Size</h2>
+                <select id="fontSize">
+                    <option value="1rem">Normal (1rem)</option>
+                    <option value="1.2rem">Large (1.2rem)</option>
+                    <option value="1.5rem">Extra Large (1.5rem)</option>
+                </select>
+            </div>
+        </form>
+
+        <main id="styleTarget">
+            <p>Welcome to the Interactive Style Playground!</p>
+            <p>Use the controls above to dynamically change the style of this text.</p>
+            <p>Experiment with background colors, text decorations, and font sizes in real-time.</p>
+        </main>
+    </div>
+
+    <a href="../hw7.html" class="back-link">Back to Homework 7</a>
+
+    <script src="../../scripts/hw7/part1.js"></script>
+</body>
+</html>
