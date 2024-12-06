@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+      name="description"
+      content="AJAX CD Collection application demonstrating XML data loading and REST API integration with a Dog CEO API example"
+    >
+    <meta
+      name="keywords"
+      content="AJAX, XML, JavaScript, REST API, Dog API, Web Development, API Integration"
+    >
+    <meta name="Jinesh" content="Jinesh Tandel" >
+
+    <style>
+     body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      p {
+        color: #333;
+        margin-bottom: 15px;
+        text-align: justify;
+      }
+
+      p:first-of-type {
+        margin-top: 15px;
+      }
+
+      a {
+        color: #0066cc;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+     h1, h2 {
+        color: #2c3e50;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 10px;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 15px;
+        border: 1px solid #ddd;
+      }
+
+      th, td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+      }
+
+      th {
+        background-color: #f2f2f2;
+      }
+
+      button {
+        background-color: #2eb0e3;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      button:hover {
+        background-color: #45a049;
+      }
+    </style>
+
+    <title>AJAX CD Collection and Dog API Example</title>
+    <script>
+      function loadXMLDoc() {
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function () {
+          if (this.readyState == 4 && this.status == 200) {
+            displayCD(this);
+          }
+        };
+        xmlhttp.open("GET", "../xml/cd_catalog.xml", true);
+        xmlhttp.send();
+      }
+
+      function displayCD(xml) {
+        var i;
+        var xmlDoc = xml.responseXML;
+        var table =
+          "<tr><th>Artist</th><th>Title</th><th>Country</th><th>Company</th><th>Price</th><th>Year</th></tr>";
+        var x = xmlDoc.getElementsByTagName("CD");
+
+        for (i = 0; i < x.length; i++) {
+          table +=
+            "<tr><td>" +
+            x[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue +
+            "</td><td>" +
+            x[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue +
+            "</td><td>" +
+            x[i].getElementsByTagName("COUNTRY")[0].childNodes[0].nodeValue +
+            "</td><td>" +
+            x[i].getElementsByTagName("COMPANY")[0].childNodes[0].nodeValue +
+            "</td><td>" +
+            x[i].getElementsByTagName("PRICE")[0].childNodes[0].nodeValue +
+            "</td><td>" +
+            x[i].getElementsByTagName("YEAR")[0].childNodes[0].nodeValue +
+            "</td></tr>";
+        }
+
+        document.getElementById("cdTable").innerHTML = table;
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Homework 8 - AJAX Application</h1>
+    <div style="display: flex; flex-direction: column;">
+      <button onclick="loadXMLDoc()">Get CD Collection</button>
+      <a href="../index.html">Back to Homework 1</a>
+    </div>
+    <br><br>
+    <table id="cdTable"></table>
+
+    <h2>Explanation of AJAX</h2>
+    <p>
+      This AJAX (Asynchronous JavaScript and XML) application demonstrates how
+      to dynamically load and display XML data without reloading the entire web
+      page. When the "Get CD Collection" button is clicked, the JavaScript
+      function <code>loadXMLDoc()</code> creates an XMLHttpRequest object to
+      fetch the XML file asynchronously.
+    </p>
+
+    <p>
+      The key steps in this AJAX process are: 1. Create an XMLHttpRequest object
+      2. Define a callback function to handle the response 3. Open a connection
+      to the XML file 4. Send the request 5. Parse the XML response 6.
+      Dynamically generate an HTML table with the CD collection data
+    </p>
+
+    <h2>REST API</h2>
+    <p>
+      For this assignment, I'll discuss the Dog CEO API, a free, public API that
+      provides dog breed images and information. This API is perfect for
+      developers creating dog-related applications, educational projects, or
+      simply adding cute dog images to their websites.
+    </p>
+
+    <p>
+      Key details about the Dog CEO API: - Response Format: JSON -
+      Authentication: No API key required - Pricing: Completely free -
+      Endpoints: Breed lists, random images, breed-specific images
+    </p>
+
+    <p>
+      For comprehensive documentation, visit the
+      <a href="https://dog.ceo/dog-api/">Dog CEO API Documentation</a>.
+      Developers can explore various endpoints for retrieving dog breed
+      information and images.
+    </p>
+
+    <h2>Dog API Example</h2>
+    <p>
+      I've created a separate page to demonstrate the Dog CEO API in more depth.
+      <a href="./hw8Parts/dog.html">Click here to view the Dog API Examples</a>.
+    </p>
+  </body>
+</html>
