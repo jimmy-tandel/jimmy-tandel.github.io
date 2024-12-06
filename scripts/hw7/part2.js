@@ -11,16 +11,16 @@ document.addEventListener('DOMContentLoaded', () => {
         for (let cookie of cookies) {
             const [cookieName, cookieValue] = cookie.split('=').map(c => c.trim());
             if (cookieName === name) {
-                return cookieValue;
+                return decodeURIComponent(cookieValue);
             }
         }
         return null;
     }
 
-    function setUserCookies(name, username) {
-        // Set cookies without expiration date - they'll last until browser closes
-        document.cookie = `userName=${name}; path=/`;
-        document.cookie = `userUsername=${username}; path=/`;
+    function setSessionCookies(name, username) {
+        // Set cookies without expiration date - they'll persist for the browser session
+        document.cookie = `userName=${encodeURIComponent(name)}; path=/`;
+        document.cookie = `userUsername=${encodeURIComponent(username)}; path=/`;
     }
 
     function showWelcomeMessage(name) {
@@ -32,6 +32,19 @@ document.addEventListener('DOMContentLoaded', () => {
     function showUserForm() {
         userForm.style.display = 'block';
         welcomeMessage.style.display = 'none';
+        nameInput.value = '';
+        usernameInput.value = '';
+    }
+
+    function handleSubmit(e) {
+        e.preventDefault();
+        const name = nameInput.value.trim();
+        const username = usernameInput.value.trim();
+
+        if (name && username) {
+            setSessionCookies(name, username);
+            showWelcomeMessage(name);
+        }
     }
 
     function init() {
@@ -39,24 +52,15 @@ document.addEventListener('DOMContentLoaded', () => {
         const savedUsername = getCookie('userUsername');
 
         if (savedName && savedUsername) {
-            // User has active cookies - show welcome message
             showWelcomeMessage(savedName);
         } else {
-            // First time user - show form
             showUserForm();
-            
-            submitButton.addEventListener('click', (e) => {
-                e.preventDefault();
-                const name = nameInput.value.trim();
-                const username = usernameInput.value.trim();
-
-                if (name && username) {
-                    setUserCookies(name, username);
-                    showWelcomeMessage(name);
-                }
-            });
         }
     }
 
+    // Event Listeners
+    submitButton.addEventListener('click', handleSubmit);
+
+    // Initialize the page
     init();
 });
